@@ -1,0 +1,269 @@
+/* Importei a fonte poppins do Google fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+/* Mudei o cursor do mouse */
+
+html {
+    cursor: url(Img/cursor.png), auto
+}
+
+html.click,
+html.click a,
+html.click a:hover,
+a:hover {
+    cursor: url(Img/cursorhover.png), auto
+}
+
+/* Separei primeiro as cores que iriam ser usadas. */
+
+:root {
+    /* Paleta Home */
+    --home-1: #606C38;
+    --home-2: #283618;
+    --home-3: #FEFAE0;
+    --home-4: #DDA15E;
+    --home-5: #BC6C25;
+
+    /* Paleta Masculina */
+    --man-1: #1F7A8C;
+    --man-2: #022B3A;
+    --man-3: #FFFFFF;
+    --man-4: #E1E5F2;
+    --man-5: #BFDBF7;
+
+    /* Paleta Feminina */
+    --woman-1: #8367C7;
+    --woman-2: #5603AD;
+    --woman-3: #F0FFF1;
+    --woman-4: #C2F8CB;
+    --woman-5: #B3E9C7;
+
+    /* Paleta kid */
+    --kid-1: #333533;
+    --kid-2: #202020;
+    --kid-3: #FFFAEA;
+    --kid-4: #FFEE32;
+    --kid-5: #FFD100;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#all {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--home-3);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    color: var(--home-2);
+    font-size: 25px;
+    cursor: url(Img/cursorhover.png), auto;
+}
+
+.nav-itens {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+}
+
+.nav-itens li a {
+    color: var(--home-1);
+    text-decoration: none;
+    font-size: 17px;
+    cursor: url(Img/cursorhover.png), auto;
+}
+
+.nav-itens a:hover {
+    border-bottom: 2px solid var(--home-5);
+}
+
+footer {
+    background-color: var(--home-2);
+    color: var(--home-4);
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+#nome {
+    font-size: 17px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-top: 12%;
+}
+
+.imagem {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    cursor: url(Img/cursorhover.png), auto;
+    transition: 0.5s ease-in-out;
+    -webkit-box-shadow: 3px 3px 10px 3px var(--home-1);
+    -moz-box-shadow: 3px 3px 10px 3px var(--home-1);
+    box-shadow: 3px 3px 10px 3px var(--home-1);
+}
+
+.imagem:hover {
+    padding: 40px;
+    border-radius: 45px;
+}
+
+img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 27px;
+    color: var(--home-2);
+    text-shadow: 2px 2px 2px var(--home-1);
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--home-1);
+}
+
+/* Criei a classe man para mudanca de cores atraves do JS */
+
+.man #all {
+    background-color: var(--man-3);
+}
+
+.man #logo {
+    color: var(--man-2);
+}
+
+.man .nav-itens li a {
+    color: var(--man-1);
+}
+
+.man .nav-itens a:hover {
+    border-bottom: 2px solid var(--man-5);
+}
+
+.man footer {
+    background-color: var(--man-2);
+    color: var(--man-4);
+}
+
+.man .imagem {
+    -webkit-box-shadow: 3px 3px 10px 3px var(--man-1);
+    -moz-box-shadow: 3px 3px 10px 3px var(--man-1);
+    box-shadow: 3px 3px 10px 3px var(--man-1);
+}
+
+.man h1 {
+    color: var(--man-2);
+    text-shadow: 2px 2px 2px var(--man-1);
+}
+
+.man h2 {
+    color: var(--man-1);
+}
+
+/* Criei a classe woman para mudanca de cores atraves do JS */
+
+.woman #all {
+    background-color: var(--woman-3);
+}
+
+.woman #logo {
+    color: var(--woman-2);
+}
+
+.woman .nav-itens li a {
+    color: var(--woman-1);
+}
+
+.woman .nav-itens a:hover {
+    border-bottom: 2px solid var(--woman-5);
+}
+
+.woman footer {
+    background-color: var(--woman-2);
+    color: var(--woman-4);
+}
+
+.woman .imagem {
+    -webkit-box-shadow: 3px 3px 10px 3px var(--woman-1);
+    -moz-box-shadow: 3px 3px 10px 3px var(--woman-1);
+    box-shadow: 3px 3px 10px 3px var(--woman-1);
+}
+
+.woman h1 {
+    color: var(--woman-2);
+    text-shadow: 2px 2px 2px var(--woman-1);
+}
+
+.woman h2 {
+    color: var(--woman-1);
+}
+
+/* Criei a classe kid para mudanca de cores atraves do JS */
+
+.kid #all {
+    background-color: var(--kid-3);
+}
+
+.kid #logo {
+    color: var(--kid-2);
+}
+
+.kid .nav-itens li a {
+    color: var(--kid-1);
+}
+
+.kid .nav-itens a:hover {
+    border-bottom: 2px solid var(--kid-5);
+}
+
+.kid footer {
+    background-color: var(--kid-2);
+    color: var(--kid-4);
+}
+
+.kid .imagem {
+    -webkit-box-shadow: 3px 3px 10px 3px var(--kid-1);
+    -moz-box-shadow: 3px 3px 10px 3px var(--kid-1);
+    box-shadow: 3px 3px 10px 3px var(--kid-1);
+}
+
+.kid h1 {
+    color: var(--kid-5);
+    text-shadow: 2px 2px 2px #202020;
+}
+
+.kid h2 {
+    color: var(--kid-1);
+}
