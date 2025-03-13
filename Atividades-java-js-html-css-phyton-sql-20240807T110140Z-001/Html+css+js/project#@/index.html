@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Minecraft Clicker</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -12,22 +12,21 @@
 				var nivel = document.getElementById('nivel').value
 
 				if(nivel === '') {
-					alert('Selecione um nível para iniciar o jogo')
+					alert('Select a difficulty level to start the game')
 					return false
 				}
 
 				window.location.href = "app.html?" + nivel
-
 			}
 		</script>
 	</head>
-	<body>
+	<body class="forest day">
 
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="d-flex justify-content-center">
-						<img src="imagens/game.png" />
+					<div class="d-flex justify-content-center mt-5">
+						<h1 style="color: white; font-weight: bold; text-shadow: 2px 2px #000;">MINECRAFT CLICKER</h1>
 					</div>
 				</div>
 			</div>
@@ -35,23 +34,39 @@
 			<div class="row">
 				<div class="col">
 					<div class="d-flex justify-content-center">
-						<div class="mb-2">
+						<div class="mb-2 mt-4">
 							<select class="form-control" id="nivel">
-								<option value="">-- Selecione o nível --</option>
-								<option value="normal">Normal</option>
-								<option value="dificil">Difícil</option>
-								<option value="chucknorris">Chuck Norris</option>
+								<option value="">-- Select Difficulty --</option>
+								<option value="normal">Peaceful</option>
+								<option value="dificil">Normal</option>
+								<option value="chucknorris">Hard</option>
 							</select>
 						</div>
 					</div>
 				</div>
 			</div>
 
-
 			<div class="row">
 				<div class="col">
 					<div class="d-flex justify-content-center">
-						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
+						<button type="button" class="btn btn-success btn-lg mt-3" onclick="iniciarJogo()">Start Game</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row mt-5">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="card bg-dark text-white" style="max-width: 600px; opacity: 0.9;">
+							<div class="card-body">
+								<h4 class="card-title">How to Play</h4>
+								<p class="card-text">
+									Click on resources (dirt, stone, wood, diamond, gold) to collect them. 
+									Watch out for hostile mobs! Click on them before they disappear or you'll lose a life.
+									Use the crafting menu to create tools that will help you gather resources faster.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
