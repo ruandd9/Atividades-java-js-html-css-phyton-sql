@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Minecraft Clicker - Game Over</title>
 		<meta charset="UTF-8" />
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="estilo.css" />
 	</head>
-	<body>
+	<body class="cave night">
 
 		<div class="container">
-			<div class="row">
+			<div class="row mt-5">
 				<div class="col">
 					<div class="d-flex justify-content-center">
-						<img src="imagens/game_over.png" />
+						<div class="card bg-dark text-white" style="max-width: 600px; opacity: 0.9;">
+							<div class="card-body text-center">
+								<h1 class="card-title" style="color: #dc3545; font-weight: bold;">GAME OVER</h1>
+								<p class="card-text mt-4" style="font-size: 18px;">
+									You were defeated by the hostile mobs of the Minecraft world!
+								</p>
+								<p class="card-text" style="font-size: 16px;">
+									Final Score: <span id="final-score">0</span>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
-
-			<div class="row">
+			<div class="row mt-4">
 				<div class="col">
 					<div class="d-flex justify-content-center">
-						<button type="button" class="btn btn-dark btn-lg" onclick="window.location.href = 'index.html' ">Reiniciar</button>
+						<button type="button" class="btn btn-danger btn-lg" onclick="window.location.href = 'index.html'">Try Again</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<script>
+			// Get score from localStorage if available
+			document.getElementById('final-score').innerText = localStorage.getItem('minecraft_score') || '0';
+		</script>
 	</body>
 </html>

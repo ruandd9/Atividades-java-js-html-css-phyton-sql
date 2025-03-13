@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Minecraft Clicker</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="estilo.css" />
 		<script src="jogo.js"></script>
 	</head>
-	<body onresize="ajustaTamanhoPalcoJogo()">
+	<body onresize="ajustaTamanhoPalcoJogo()" class="forest day">
 
 		<div class="painel">
 			<div class="vidas">
@@ -18,12 +18,28 @@
 			<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
 		</div>
 
+		<!-- Inventory and Score UI -->
+		<div class="game-ui">
+			<h3>Inventory</h3>
+			<div id="inventory">
+				<!-- Inventory will be populated by JavaScript -->
+			</div>
+			
+			<div class="score-container">
+				<span>Score:</span>
+				<span id="score">0</span>
+			</div>
+		</div>
+		
+		<!-- Crafting UI -->
+		<div class="crafting">
+			<h3>Crafting</h3>
+			<button class="craft-btn" onclick="craft('pickaxe')">Craft Pickaxe (3 Wood, 2 Stone)</button>
+			<button class="craft-btn" onclick="craft('sword')">Craft Sword (1 Wood, 2 Stone)</button>
+		</div>
+
 		<script>
 			document.getElementById('cronometro').innerHTML = tempo
-
-			var criaMosca = setInterval(function() { 
-				posicaoRandomica()
-			}, criaMosquitoTempo)
 		</script>
 	</body>
 </html>

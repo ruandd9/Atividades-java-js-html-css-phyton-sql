@@ -1,53 +1,156 @@
 html {
-	cursor: url(imagens/mata_mosquito.png) 30 30, auto;
+    cursor: crosshair; /* Use crosshair cursor instead of custom image */
 }
 
 body {
-	background-image: url(imagens/bg.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
+    background-image: url(imagens/forest_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s ease-in-out;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraft', Arial, sans-serif;
 }
 
-.mosquito1 {
-	width: 50px;
-	height: 50px;
+/* Day/Night Cycle */
+body.day {
+    filter: brightness(100%);
 }
 
-.mosquito2 {
-	width: 70px;
-	height: 70px;
+body.night {
+    filter: brightness(40%);
 }
 
-.mosquito3 {
-	width: 90px;
-	height: 90px;
+/* Biomes */
+body.forest {
+    background-color: #228B22; /* Forest Green */
+}
+
+body.desert {
+    background-color: #F4A460; /* Sandy Brown */
+}
+
+body.snow {
+    background-color: #F0F8FF; /* Alice Blue */
+}
+
+body.cave {
+    background-color: #2F4F4F; /* Dark Slate Gray */
+}
+
+/* Resource and Mob Sizes */
+.size1 {
+    width: 50px;
+    height: 50px;
+}
+
+.size2 {
+    width: 70px;
+    height: 70px;
+}
+
+.size3 {
+    width: 90px;
+    height: 90px;
 }
 
 .ladoA {
-	transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .ladoB {
-	transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
+/* Game UI */
 .painel {
-	position: absolute;
-	width: 190px;
-	padding: 10px;
-	left: 0px;
-	bottom: 0px;
-	border-top:solid 1px #fff;
-	background-color: #fff;
-	opacity: 0.7
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    background-color: #333;
+    color: white;
+    opacity: 0.9;
 }
 
 .vidas {
-	float: left;
+    float: left;
 }
 
 .cronometro {
-	float: left;
-	font-size: 20px;
-	font-weight: bold;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Inventory and Score */
+.game-ui {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0.9;
+    min-width: 200px;
+}
+
+#inventory {
+    margin-bottom: 15px;
+}
+
+#inventory div {
+    margin: 5px 0;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Crafting UI */
+.crafting {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.craft-btn {
+    background-color: #5c5c5c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.craft-btn:hover {
+    background-color: #7e7e7e;
+}
+
+/* Resource and Mob Animation */
+.resource, .mob {
+    transition: transform 0.1s;
+}
+
+.resource:hover, .mob:hover {
+    transform: scale(1.1);
+}
+
+/* Minecraft-style font */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 }
